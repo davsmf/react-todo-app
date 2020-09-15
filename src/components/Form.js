@@ -7,6 +7,7 @@ export default function Form({ inputText, setInputText, todos, setTodos, setStat
     };
 
     const submitTodoHandler = (e) => {
+        // Must find a way to alert user when input is empty and avoid creating it
         e.preventDefault();
         setTodos([...todos, {task: inputText, completed: false, id: Math.round(Math.random() * 1000)}]);
         setInputText('');
